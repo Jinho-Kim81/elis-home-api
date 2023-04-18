@@ -1,4 +1,15 @@
 "use strict";
 
-console.log("잘연결 되나?");
-console.log("asdfasdf");
+const id = document.querySelector("#login-id"),
+  pswd = document.querySelector("#login-pw"),
+  lgbt = document.querySelector("button");
+
+lgbt.addEventListener("click", login);
+
+function login() {
+  const req = {
+    id: id.value,
+    pswd: pswd.value,
+  };
+  console.log(req);
+}
