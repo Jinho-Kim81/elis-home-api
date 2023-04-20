@@ -11,5 +11,12 @@ function login() {
     id: id.value,
     pswd: pswd.value,
   };
-  console.log(req);
+
+  fetch("/login", {
+    method: "PSOT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(req),
+  });
 }
